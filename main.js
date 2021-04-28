@@ -19,11 +19,9 @@ if (width < 992) {
 canvas.addEventListener("mousedown", my_mousedown);
 
 function my_mousedown(e) {
-    //Addictonal Activity start
+    
     color = document.getElementById("color").value;
     width_of_line = document.getElementById("width_of_line").value;
-    //Addictonal Activity ends
-
     mouseEvent = "mouseDown";
 }
 
@@ -98,4 +96,9 @@ function my_touchmove(e) {
     last_position_of_x = current_position_of_touch_x;
     last_position_of_y = current_position_of_touch_y;
 
+}
+
+function clearArea() {
+
+    ctx.clearRect(0 , 0 , ctx.canvas.width , ctx.canvas.height);
 }
